@@ -23,7 +23,7 @@ model_name = 'bert-base-uncased'
 model_path = basedir + '\\models\\'
 model_base = model_path + model_name
 print("Pre-trained model directory : ", model_base)
-data_name = 'nl27k\\'
+data_name = 'cn15k\\'
 data_path = basedir + '\\data\\'
 data_base = data_path + data_name
 print('Dataset directory : ', data_base)

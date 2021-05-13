@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="04e7e93c-d3a7-4f4b-813c-1f3b4f12f212" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="04e7e93c-d3a7-4f4b-813c-1f3b4f12f212" name="Default Changelist" comment="uploading sources">
+      <change beforePath="$PROJECT_DIR$/src/kgbert2.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/kgbert2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kgpreparing.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/kgpreparing.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lstm.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/lstm.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +36,19 @@
       <option name="presentableId" value="Default" />
       <updated>1620892725868</updated>
     </task>
+    <task id="LOCAL-00001" summary="uploading sources">
+      <created>1620894716779</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1620894716779</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="uploading sources" />
+    <option name="LAST_COMMIT_MESSAGE" value="uploading sources" />
   </component>
   <component name="WindowStateProjectService">
     <state x="640" y="314" key="Github.ShareDialog" timestamp="1620892850921">
@@ -46,5 +59,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="589" y="119" key="Github.UntrackedFilesDialog/0.0.1536.824@0.0.1536.824" timestamp="1620892877082" />
+    <state x="361" y="148" key="Vcs.Push.Dialog.v2" timestamp="1620894723774">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="148" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1620894723774" />
   </component>
 </project>

@@ -16,7 +16,7 @@
 import os
 basedir = os.path.abspath("..")
 print("Base directory : ", basedir)
-data_name = 'nl27k\\'
+data_name = 'cn15k\\'
 data_path = basedir + '\\data\\'
 data_base = data_path + data_name
 print('Dataset directory : ', data_base)
