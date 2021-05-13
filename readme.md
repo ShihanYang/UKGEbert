@@ -1,7 +1,7 @@
 # UKGE based on BERT  
 Uncertain Knowledge Graphs Embedding is implemented by means of BERT pretrained natural language model. Exploring approximate inference on the embedding space. Considering the commonsense reasoning based on these works.
 
-## environment
+## Environment require
 * python 3.6
 * torch 1.6.0+cpu
 * transformers 4.0.0
@@ -13,7 +13,36 @@ Uncertain Knowledge Graphs Embedding is implemented by means of BERT pretrained 
   |CN15k| 15,000 | 36 | 234,675 | 0.627 | 0.234 | 15.6 |    
   |PPI5k|  4,999 |  7 | 271,666 | 0.415 | 0.213 | 54.3 |    
 
-## run
+## Comparison 
+The unit of all values on MSE and MAE is  10$^{-2}$. "-" means the corresponding data did not report in literatures.
+  <table>
+	<tr>
+	    <th>dataset</th>
+	    <th colspan = 3>CN15k</th>
+	    <th colspan = 3>PPI5k</th>  
+	</tr >
+	<tr>
+	    <td>metrics</td><td>MSE</td><td>MAE</td><td>epochs</td><td>MSE</td><td>MAE</td><td>epochs</td>
+	</tr>
+	<tr>
+	    <td>URGE</td><td>10.32</td><td>22.72</td><td>-</td><td>1.44</td><td>6.00</td><td>-</td>
+	</tr>
+	<tr>
+	    <td>UKGE$_{rect}$</td><td>8.61</td><td>19.90</td><td>>100</td><td>0.95</td><td>3.79</td><td>>100</td>
+	</tr>
+	<tr>
+	    <td>UKGE$_{logi}$</td></td><td>9.86</td><td>20.74</td><td>>100</td><td>0.96</td><td>4.07</td><td>>100</td>
+	</tr>
+	<tr>
+	    <td>UKG$_s$E</td></td><td>7.71</td><td>21.34</td><td>19</td><td>0.98</td><td>5.98</td><td>-</td>
+	</tr>
+	<tr>
+	    <td>UKGE$_{bert}$</td></td><td>6.61</td><td>19.3</td><td>2</td><td>0.85</td><td>5.38</td><td>75</td>
+	</tr>
+	</table>
+  
+
+## Run
     python.exe ./prediction.py
     Using Theano backend.
     Model: "bert_fine_tuning_UKGE"
