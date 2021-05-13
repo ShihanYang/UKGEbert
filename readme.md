@@ -34,7 +34,7 @@ The unit of all values on MSE and MAE is  10$^{-2}$. "-" means the corresponding
 	    <td>UKGE$_{logi}$</td></td><td>9.86</td><td>20.74</td><td>>100</td><td>0.96</td><td>4.07</td><td>>100</td>
 	</tr>
 	<tr>
-	    <td>UKG$_s$E</td></td><td>7.71</td><td>21.34</td><td>19</td><td>0.98</td><td>5.98</td><td>-</td>
+	    <td>UKG$_s$E</td></td><td>7.71</td><td>21.34</td><td>19</td><td>0.98</td><td>5.98</td><td>80</td>
 	</tr>
 	<tr>
 	    <td>UKGE$_{bert}$</td></td><td>6.61</td><td>19.3</td><td>2</td><td>0.85</td><td>5.38</td><td>75</td>

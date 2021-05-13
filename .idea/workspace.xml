@@ -19,8 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="04e7e93c-d3a7-4f4b-813c-1f3b4f12f212" name="Default Changelist" comment="pickle data utility">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="04e7e93c-d3a7-4f4b-813c-1f3b4f12f212" name="Default Changelist" comment="additional information of readme">
       <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -75,7 +74,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620895106114</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="additional information of readme">
+      <created>1620907678298</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1620907678298</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -93,7 +99,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="uploading sources" />
     <MESSAGE value="pickle data utility" />
-    <option name="LAST_COMMIT_MESSAGE" value="pickle data utility" />
+    <MESSAGE value="additional information of readme" />
+    <option name="LAST_COMMIT_MESSAGE" value="additional information of readme" />
   </component>
   <component name="WindowStateProjectService">
     <state x="640" y="314" key="Github.ShareDialog" timestamp="1620892850921">
@@ -104,9 +111,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="589" y="119" key="Github.UntrackedFilesDialog/0.0.1536.824@0.0.1536.824" timestamp="1620892877082" />
-    <state x="361" y="148" key="Vcs.Push.Dialog.v2" timestamp="1620895373680">
+    <state x="361" y="148" key="Vcs.Push.Dialog.v2" timestamp="1620907682174">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="148" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1620895373680" />
+    <state x="361" y="148" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1620907682174" />
   </component>
 </project>
