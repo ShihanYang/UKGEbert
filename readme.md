@@ -5,9 +5,11 @@ Uncertain Knowledge Graphs Embedding is implemented by means of BERT pretrained 
 * python 3.6
 * torch 1.6.0+cpu
 * transformers 4.0.0
-* others   
+* pretrained BERT models, such as 'bert-base-uncased': "https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased.tar.gz", etc.
 
 ## Uncertain Knowledge Graphs datasets for benchmark
+  In data directory, train.tsv is the training data, test.tsv the testing data and val.tsv the validation data.    
+  
   | dataset | entities | relations | facts | average of confidence | standard deviation | ratio of facts/relations |             
   | ---- | ---- | ---- | ---- | ---- | ---- | ---- | 
   |CN15k| 15,000 | 36 | 234,675 | 0.627 | 0.234 | 15.6 |    
@@ -57,6 +59,17 @@ The unit of all values on MSE and MAE is  10$^{-2}$. "-" means the corresponding
     Trainable params: 4,722,433
     Non-trainable params: 0
     _________________________________________________________________
+    ...
+    
+    Prediction for (HEAD, ?relation?, TAIL) RANKING:
+    Head = ' car '
+    Tail = ' people '
+      
+          relation candidate 1 = ('hasa', 0.8294004)
+          relation candidate 2 = ('usedfor', 0.760266) *
+          relation candidate 3 = ('createdby', 0.65154946)
+          relation candidate 4 = ('definedas', 0.63723207)
+          relation candidate 5 = ('atlocation', 0.6002464)
     
 ## Under working
 The project is under working. We are very sorry for any trouble to you. You are welcome to put forward your valuable opinions by comments.

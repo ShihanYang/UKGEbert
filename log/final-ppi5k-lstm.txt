@@ -1,0 +1,200 @@
+D:\python\python.exe D:/pyCharmWorkspace/ukg_BERT/src/lstm.py
+config: C:\Users\dryan\.keras\keras.json
+backend: tensorflow  was changed into theano.
+in the source file: d:\python\Lib\site-packages\keraackend\load_backend.py
+Using Theano backend.
+WARNING (theano.tensor.blas): Using NumPy C-API based implementation for BLAS functions.
+enities total: 4999
+relations total: 7
+embedding vectors: 5006 with dim = 768
+Embeddings loaded.
+ID-RelationName 7 items are created.
+ID-EntityName 4999 items are created.
+X_train without neg samples: 230929
+y_train without neg samples: 230929
+Entities num: 4999
+Relations num: 7
+Sentences num: 9724
+Valid total num: 230929
+Training positive samples loaded.
+Negative samples num: 230929
+X_train num: 461858
+y_train num: 461858
+Train samples are ready!
+X_test: 21720
+y_test: 21720
+Testing samples loaded.
+X_valid: 19017
+y_valid: 19017
+Validating samples loaded.
+Model: "bert_fine_tuning_UKGE"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #
+=================================================================
+lstm_1 (LSTM)                (None, 3, 768)            4721664
+_________________________________________________________________
+lstm_2 (LSTM)                (None, 768)               4721664
+_________________________________________________________________
+dense_1 (Dense)              (None, 1)                 769
+=================================================================
+Total params: 9,444,097
+Trainable params: 9,444,097
+Non-trainable params: 0
+_________________________________________________________________
+Begin training (confidence learning) ... ...
+  X_train shape: (461858, 3, 768)
+  y_train shape: (461858,)
+  X_valid shape: (19017, 3, 768)
+  y_valid shape: (19017,)
+  shuffling data ...
+  *_memory_* X_train: 8512 M, y_train: 9 M
+  begin fitting ...
+Train on 200000 samples, validate on 19017 samples
+Epoch 71/250
+ - 1481s - loss: 0.0038 - mean_absolute_error: 0.0419 - val_loss: 0.0104 - val_mean_absolute_error: 0.0634
+
+Epoch 00071: val_loss did not improve from 0.01039
+Epoch 72/250
+ - 1452s - loss: 0.0035 - mean_absolute_error: 0.0399 - val_loss: 0.0100 - val_mean_absolute_error: 0.0618
+
+Epoch 00072: val_loss improved from 0.01039 to 0.01003, saving model to D:\pyCharmWorkspace\ukg_BERT\data\ppi5k\checkpoints\model_e250_768d.h5-loss.chk
+Epoch 73/250
+ - 1452s - loss: 0.0034 - mean_absolute_error: 0.0386 - val_loss: 0.0098 - val_mean_absolute_error: 0.0609
+
+Epoch 00073: val_loss improved from 0.01003 to 0.00982, saving model to D:\pyCharmWorkspace\ukg_BERT\data\ppi5k\checkpoints\model_e250_768d.h5-loss.chk
+Epoch 74/250
+ - 1448s - loss: 0.0032 - mean_absolute_error: 0.0373 - val_loss: 0.0099 - val_mean_absolute_error: 0.0613
+
+Epoch 00074: val_loss did not improve from 0.00982
+Epoch 75/250
+ - 1449s - loss: 0.0030 - mean_absolute_error: 0.0363 - val_loss: 0.0099 - val_mean_absolute_error: 0.0617
+
+Epoch 00075: val_loss did not improve from 0.00982
+Epoch 76/250
+ - 1447s - loss: 0.0029 - mean_absolute_error: 0.0354 - val_loss: 0.0095 - val_mean_absolute_error: 0.0593
+
+Epoch 00076: val_loss improved from 0.00982 to 0.00949, saving model to D:\pyCharmWorkspace\ukg_BERT\data\ppi5k\checkpoints\model_e250_768d.h5-loss.chk
+Epoch 77/250
+ - 1450s - loss: 0.0028 - mean_absolute_error: 0.0346 - val_loss: 0.0097 - val_mean_absolute_error: 0.0600
+
+Epoch 00077: val_loss did not improve from 0.00949
+Epoch 78/250
+ - 1446s - loss: 0.0027 - mean_absolute_error: 0.0339 - val_loss: 0.0095 - val_mean_absolute_error: 0.0592
+
+Epoch 00078: val_loss did not improve from 0.00949
+Epoch 79/250
+ - 1449s - loss: 0.0027 - mean_absolute_error: 0.0334 - val_loss: 0.0093 - val_mean_absolute_error: 0.0581
+
+Epoch 00079: val_loss improved from 0.00949 to 0.00927, saving model to D:\pyCharmWorkspace\ukg_BERT\data\ppi5k\checkpoints\model_e250_768d.h5-loss.chk
+Epoch 80/250
+ - 1445s - loss: 0.0026 - mean_absolute_error: 0.0327 - val_loss: 0.0094 - val_mean_absolute_error: 0.0587
+
+Epoch 00080: val_loss did not improve from 0.00927
+Epoch 81/250
+ - 1446s - loss: 0.0025 - mean_absolute_error: 0.0323 - val_loss: 0.0094 - val_mean_absolute_error: 0.0585
+
+Epoch 00081: val_loss did not improve from 0.00927
+Epoch 82/250
+ - 1448s - loss: 0.0025 - mean_absolute_error: 0.0316 - val_loss: 0.0093 - val_mean_absolute_error: 0.0584
+
+Epoch 00082: val_loss did not improve from 0.00927
+Epoch 83/250
+ - 1450s - loss: 0.0024 - mean_absolute_error: 0.0312 - val_loss: 0.0091 - val_mean_absolute_error: 0.0577
+
+Epoch 00083: val_loss improved from 0.00927 to 0.00914, saving model to D:\pyCharmWorkspace\ukg_BERT\data\ppi5k\checkpoints\model_e250_768d.h5-loss.chk
+Epoch 84/250
+ - 1449s - loss: 0.0024 - mean_absolute_error: 0.0308 - val_loss: 0.0092 - val_mean_absolute_error: 0.0573
+
+Epoch 00084: val_loss did not improve from 0.00914
+Epoch 85/250
+ - 1449s - loss: 0.0023 - mean_absolute_error: 0.0303 - val_loss: 0.0092 - val_mean_absolute_error: 0.0580
+
+Epoch 00085: val_loss did not improve from 0.00914
+Epoch 86/250
+ - 1449s - loss: 0.0023 - mean_absolute_error: 0.0300 - val_loss: 0.0089 - val_mean_absolute_error: 0.0565
+
+Epoch 00086: val_loss improved from 0.00914 to 0.00894, saving model to D:\pyCharmWorkspace\ukg_BERT\data\ppi5k\checkpoints\model_e250_768d.h5-loss.chk
+Epoch 87/250
+ - 1451s - loss: 0.0023 - mean_absolute_error: 0.0296 - val_loss: 0.0090 - val_mean_absolute_error: 0.0563
+
+Epoch 00087: val_loss did not improve from 0.00894
+Epoch 88/250
+ - 1455s - loss: 0.0022 - mean_absolute_error: 0.0293 - val_loss: 0.0089 - val_mean_absolute_error: 0.0562
+
+Epoch 00088: val_loss did not improve from 0.00894
+Epoch 89/250
+ - 1455s - loss: 0.0022 - mean_absolute_error: 0.0289 - val_loss: 0.0092 - val_mean_absolute_error: 0.0569
+
+Epoch 00089: val_loss did not improve from 0.00894
+Epoch 90/250
+ - 1449s - loss: 0.0022 - mean_absolute_error: 0.0288 - val_loss: 0.0088 - val_mean_absolute_error: 0.0559
+
+Epoch 00090: val_loss improved from 0.00894 to 0.00883, saving model to D:\pyCharmWorkspace\ukg_BERT\data\ppi5k\checkpoints\model_e250_768d.h5-loss.chk
+Epoch 91/250
+ - 1459s - loss: 0.0022 - mean_absolute_error: 0.0284 - val_loss: 0.0090 - val_mean_absolute_error: 0.0563
+
+Epoch 00091: val_loss did not improve from 0.00883
+Epoch 92/250
+ - 1453s - loss: 0.0021 - mean_absolute_error: 0.0281 - val_loss: 0.0090 - val_mean_absolute_error: 0.0563
+
+Epoch 00092: val_loss did not improve from 0.00883
+Epoch 93/250
+ - 1452s - loss: 0.0021 - mean_absolute_error: 0.0279 - val_loss: 0.0089 - val_mean_absolute_error: 0.0559
+
+Epoch 00093: val_loss did not improve from 0.00883
+Epoch 94/250
+ - 1451s - loss: 0.0021 - mean_absolute_error: 0.0276 - val_loss: 0.0089 - val_mean_absolute_error: 0.0555
+
+Epoch 00094: val_loss did not improve from 0.00883
+Epoch 95/250
+ - 1450s - loss: 0.0021 - mean_absolute_error: 0.0274 - val_loss: 0.0089 - val_mean_absolute_error: 0.0557
+
+Epoch 00095: val_loss did not improve from 0.00883
+Epoch 96/250
+ - 1451s - loss: 0.0020 - mean_absolute_error: 0.0272 - val_loss: 0.0090 - val_mean_absolute_error: 0.0559
+
+Epoch 00096: val_loss did not improve from 0.00883
+Epoch 97/250
+ - 1457s - loss: 0.0020 - mean_absolute_error: 0.0269 - val_loss: 0.0090 - val_mean_absolute_error: 0.0560
+
+Epoch 00097: val_loss did not improve from 0.00883
+Epoch 98/250
+ - 1458s - loss: 0.0020 - mean_absolute_error: 0.0268 - val_loss: 0.0090 - val_mean_absolute_error: 0.0560
+
+Epoch 00098: val_loss did not improve from 0.00883
+Epoch 99/250
+ - 1458s - loss: 0.0020 - mean_absolute_error: 0.0265 - val_loss: 0.0090 - val_mean_absolute_error: 0.0561
+
+Epoch 00099: val_loss did not improve from 0.00883
+Epoch 100/250
+ - 1455s - loss: 0.0020 - mean_absolute_error: 0.0264 - val_loss: 0.0088 - val_mean_absolute_error: 0.0553
+
+Epoch 00100: val_loss did not improve from 0.00883
+Epoch 101/250
+ - 1457s - loss: 0.0020 - mean_absolute_error: 0.0261 - val_loss: 0.0089 - val_mean_absolute_error: 0.0552
+
+Epoch 00101: val_loss did not improve from 0.00883
+Epoch 102/250
+ - 1457s - loss: 0.0020 - mean_absolute_error: 0.0261 - val_loss: 0.0090 - val_mean_absolute_error: 0.0553
+
+Epoch 00102: val_loss did not improve from 0.00883
+Epoch 103/250
+ - 1455s - loss: 0.0019 - mean_absolute_error: 0.0259 - val_loss: 0.0088 - val_mean_absolute_error: 0.0549
+
+Epoch 00103: val_loss did not improve from 0.00883
+Epoch 104/250
+ - 1448s - loss: 0.0019 - mean_absolute_error: 0.0256 - val_loss: 0.0090 - val_mean_absolute_error: 0.0553
+
+Epoch 00104: val_loss did not improve from 0.00883
+Epoch 105/250
+ - 1463s - loss: 0.0019 - mean_absolute_error: 0.0255 - val_loss: 0.0089 - val_mean_absolute_error: 0.0549
+
+Epoch 00105: val_loss did not improve from 0.00883
+Epoch 00105: early stopping
+Train FINISHED.
+Time consumed(s): 50918.66901922226
+Evaluate results:
+ MSE, MAE = [0.008546466285681856, 0.05389213189482689]
+Trained model was saved in: model_e250_768d.h5
+
+Process finished with exit code 0

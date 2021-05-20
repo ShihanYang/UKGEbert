@@ -1,0 +1,417 @@
+D:\python\python.exe D:/pyCharmWorkspace/ukg_BERT/src/prediction.py
+Using Theano backend.
+config: C:\Users\dryan\.keras\keras.json
+backend: tensorflow  was changed into theano.
+in the source file: d:\python\Lib\site-packages\keraackend\load_backend.py
+WARNING (theano.tensor.blas): Using NumPy C-API based implementation for BLAS functions.
+model: <keras.engine.sequential.Sequential object at 0x000002579636AA58>
+Model: "bert_fine_tuning_UKGE"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #
+=================================================================
+lstm_1 (LSTM)                (None, 768)               4721664
+_________________________________________________________________
+dense_1 (Dense)              (None, 1)                 769
+=================================================================
+Total params: 4,722,433
+Trainable params: 4,722,433
+Non-trainable params: 0
+_________________________________________________________________
+Model LOADED.
+ID_Dictionary READY.
+Embedding vectors LOADED.
+Original confidence LOADED.
+---------------
+ Predicting...
+---------------
+Prediction for (HEAD, RELATION, ?tail?) RANKING:
+Head = ' rush '
+Relation = ' relatedto '
+  candidate 1 = ('excellent', 0.8972596)
+  candidate 2 = ('ice', 0.83025134)
+  candidate 3 = ('direct', 0.81903714)
+  candidate 4 = ('increase', 0.8190314)
+  candidate 5 = ('quicksilver', 0.816273)
+  candidate 6 = ('jump', 0.79566884)
+  candidate 7 = ('superior', 0.7954198)
+  candidate 8 = ('shout', 0.7906544)
+  candidate 9 = ('fine', 0.79017794)
+  candidate 10 = ('current', 0.7784685)
+    seen fact ('fast', 0.7445656) & true value = 0.9679717219216152
+    seen fact ('go fast', 0.7221474) & true value = 0.639788932881215
+    seen fact ('flow', 0.71135557) & true value = 0.709293243275961
+    seen fact ('move', 0.7053093) & true value = 0.5568092713148426
+    seen fact ('rapid', 0.6965838) & true value = 0.709293243275961
+    seen fact ('haste', 0.6913562) & true value = 0.709293243275961
+    seen fact ('run', 0.6864327) & true value = 0.709293243275961
+    seen fact ('express', 0.6830128) & true value = 0.1129104967530668
+    seen fact ('perform', 0.65094495) & true value = 0.709293243275961
+    seen fact ('attack', 0.6461951) & true value = 0.709293243275961
+    seen fact ('movement', 0.6401844) & true value = 0.534724967048435
+    seen fact ('hurried', 0.63967407) & true value = 0.6532068994607554
+    seen fact ('dribble', 0.63210446) & true value = 0.709293243275961
+    seen fact ('perfect', 0.62805897) & true value = 0.709293243275961
+    seen fact ('quick', 0.62646) & true value = 0.4635025793232646
+    seen fact ('thrill', 0.60967344) & true value = 0.4044559631916703
+    seen fact ('rock', 0.6078083) & true value = 0.2495892096378169
+    seen fact ('sensation', 0.60592467) & true value = 0.709293243275961
+    seen fact ('up', 0.58774793) & true value = 0.4896347970776147
+    seen fact ('go', 0.569102) & true value = 0.639788932881215
+    seen fact ('ahead', 0.56892407) & true value = 0.10524002654554898
+    seen fact ('basket', 0.5534261) & true value = 0.709293243275961
+    seen fact ('slow', 0.5528863) & true value = 0.10524002654554898
+    seen fact ('hour', 0.54682744) & true value = 0.6538602644677998
+    seen fact ('swift', 0.5425986) & true value = 0.709293243275961
+    seen fact ('action', 0.53971136) & true value = 0.6590299076388343
+    seen fact ('busy', 0.5310586) & true value = 0.3371162657154722
+    seen fact ('along', 0.5279533) & true value = 0.4440472176560277
+    seen fact ('running', 0.525759) & true value = 0.2886555689270046
+    seen fact ('urgency', 0.50634456) & true value = 0.2001390845425659
+    seen fact ('exhilaration', 0.49910384) & true value = 0.709293243275961
+    seen fact ('make', 0.49732113) & true value = 0.35788085123412616
+    seen fact ('warning', 0.49580476) & true value = 0.709293243275961
+    seen fact ('motion', 0.49063617) & true value = 0.709293243275961
+    seen fact ('carry', 0.4875511) & true value = 0.709293243275961
+    seen fact ('big', 0.47850463) & true value = 0.24041097071601544
+    seen fact ('act', 0.47608683) & true value = 0.709293243275961
+    seen fact ('dash', 0.4699872) & true value = 0.27535564944961954
+    seen fact ('rusher', 0.45666414) & true value = 0.709293243275961
+    seen fact ('band', 0.444207) & true value = 0.6653530924623557
+    seen fact ('order', 0.4339459) & true value = 0.2847353091742141
+    seen fact ('moving', 0.42936844) & true value = 0.238849829353536
+    seen fact ('in hurry', 0.42635822) & true value = 0.5600848018293143
+    seen fact ('late', 0.42448464) & true value = 0.3349472970682732
+    seen fact ('transport', 0.4116145) & true value = 0.709293243275961
+    seen fact ('football', 0.39984897) & true value = 0.12036486838310625
+    seen fact ('speeding', 0.39816663) & true value = 0.1228037123147036
+    seen fact ('going', 0.3825701) & true value = 0.5683260016146355
+    seen fact ('noisy', 0.3758068) & true value = 0.709293243275961
+    seen fact ('speedy', 0.37369677) & true value = 0.19278825926227888
+    seen fact ('faster', 0.37013423) & true value = 0.35788085123412616
+    seen fact ('do', 0.3647981) & true value = 0.2570018146047729
+    seen fact ('seat', 0.3601635) & true value = 0.709293243275961
+    seen fact ('feeling', 0.3574786) & true value = 0.4019318166107131
+    seen fact ('taking', 0.34009603) & true value = 0.10524002654554898
+    seen fact ('effect', 0.33999515) & true value = 0.10782163427527658
+    seen fact ('brief', 0.32194087) & true value = 0.709293243275961
+    seen fact ('mat', 0.31826982) & true value = 0.709293243275961
+    seen fact ('job', 0.29756615) & true value = 0.3037804107645619
+    seen fact ('mail', 0.29539526) & true value = 0.2847353091742141
+    seen fact ('about', 0.2763983) & true value = 0.2886555689270046
+    seen fact ('get going', 0.26697797) & true value = 0.2159678176763981
+    seen fact ('delivery', 0.24719) & true value = 0.3392676002761702
+    seen fact ('water movement', 0.21716909) & true value = 0.1813643545844212
+    seen fact ('being', 0.21701646) & true value = 0.3349472970682732
+    seen fact ('quickness', 0.21001987) & true value = 0.2276560827256897
+    seen fact ('chair', 0.19805516) & true value = 0.709293243275961
+    seen fact ('mail order', 0.15456714) & true value = 0.2847353091742141
+    seen fact ('lineman', 0.1520867) & true value = 0.709293243275961
+    seen fact ('sawyer', 0.1025547) & true value = 0.10524002654554898
+    seen fact ('fraternity', 0.01064703) & true value = 0.709293243275961
+    Total seen facts: 71 / 15036
+True ranking for ( rush , relatedto , *tails* ):
+  attending rank facts: 71
+    true tail 1 : ('fast', 0.9679717219216152)
+    true tail 2 : ('flow', 0.709293243275961)
+    true tail 3 : ('perfect', 0.709293243275961)
+    true tail 4 : ('swift', 0.709293243275961)
+    true tail 5 : ('carry', 0.709293243275961)
+    true tail 6 : ('dribble', 0.709293243275961)
+    true tail 7 : ('lineman', 0.709293243275961)
+    true tail 8 : ('perform', 0.709293243275961)
+    true tail 9 : ('act', 0.709293243275961)
+    true tail 10 : ('sensation', 0.709293243275961)
+    true tail 11 : ('rusher', 0.709293243275961)
+    true tail 12 : ('warning', 0.709293243275961)
+    true tail 13 : ('fraternity', 0.709293243275961)
+    true tail 14 : ('chair', 0.709293243275961)
+    true tail 15 : ('haste', 0.709293243275961)
+    true tail 16 : ('run', 0.709293243275961)
+    true tail 17 : ('exhilaration', 0.709293243275961)
+    true tail 18 : ('mat', 0.709293243275961)
+    true tail 19 : ('rapid', 0.709293243275961)
+    true tail 20 : ('basket', 0.709293243275961)
+    true tail 21 : ('seat', 0.709293243275961)
+    true tail 22 : ('transport', 0.709293243275961)
+    true tail 23 : ('brief', 0.709293243275961)
+    true tail 24 : ('attack', 0.709293243275961)
+    true tail 25 : ('noisy', 0.709293243275961)
+    true tail 26 : ('motion', 0.709293243275961)
+    true tail 27 : ('band', 0.6653530924623557)
+    true tail 28 : ('action', 0.6590299076388343)
+    true tail 29 : ('hour', 0.6538602644677998)
+    true tail 30 : ('hurried', 0.6532068994607554)
+    true tail 31 : ('go fast', 0.639788932881215)
+    true tail 32 : ('go', 0.639788932881215)
+    true tail 33 : ('going', 0.5683260016146355)
+    true tail 34 : ('in hurry', 0.5600848018293143)
+    true tail 35 : ('move', 0.5568092713148426)
+    true tail 36 : ('movement', 0.534724967048435)
+    true tail 37 : ('up', 0.4896347970776147)
+    true tail 38 : ('quick', 0.4635025793232646)
+    true tail 39 : ('along', 0.4440472176560277)
+    true tail 40 : ('thrill', 0.4044559631916703)
+    true tail 41 : ('feeling', 0.4019318166107131)
+    true tail 42 : ('make', 0.35788085123412616)
+    true tail 43 : ('faster', 0.35788085123412616)
+    true tail 44 : ('delivery', 0.3392676002761702)
+    true tail 45 : ('busy', 0.3371162657154722)
+    true tail 46 : ('being', 0.3349472970682732)
+    true tail 47 : ('late', 0.3349472970682732)
+    true tail 48 : ('job', 0.3037804107645619)
+    true tail 49 : ('running', 0.2886555689270046)
+    true tail 50 : ('about', 0.2886555689270046)
+    true tail 51 : ('mail order', 0.2847353091742141)
+    true tail 52 : ('mail', 0.2847353091742141)
+    true tail 53 : ('order', 0.2847353091742141)
+    true tail 54 : ('dash', 0.27535564944961954)
+    true tail 55 : ('do', 0.2570018146047729)
+    true tail 56 : ('rock', 0.2495892096378169)
+    true tail 57 : ('big', 0.24041097071601544)
+    true tail 58 : ('moving', 0.238849829353536)
+    true tail 59 : ('quickness', 0.2276560827256897)
+    true tail 60 : ('get going', 0.2159678176763981)
+    true tail 61 : ('urgency', 0.2001390845425659)
+    true tail 62 : ('speedy', 0.19278825926227888)
+    true tail 63 : ('water movement', 0.1813643545844212)
+    true tail 64 : ('speeding', 0.1228037123147036)
+    true tail 65 : ('football', 0.12036486838310625)
+    true tail 66 : ('express', 0.1129104967530668)
+    true tail 67 : ('effect', 0.10782163427527658)
+    true tail 68 : ('taking', 0.10524002654554898)
+    true tail 69 : ('slow', 0.10524002654554898)
+    true tail 70 : ('sawyer', 0.10524002654554898)
+    true tail 71 : ('ahead', 0.10524002654554898)
+--------------------
+ NDCG evaluating...
+--------------------
+ndcg list: 71 [0.7445656, 0.7221474, 0.71135557, 0.7053093, 0.6965838, 0.6913562, 0.6864327, 0.6830128, 0.65094495]
+idcg list: 71 [0.9679717219216152, 0.639788932881215, 0.709293243275961, 0.5568092713148426, 0.709293243275961, 0.709293243275961, 0.709293243275961, 0.1129104967530668, 0.709293243275961]
+  ranked idcg list: [0.9679717219216152, 0.709293243275961, 0.709293243275961, 0.709293243275961, 0.709293243275961, 0.709293243275961, 0.709293243275961, 0.709293243275961, 0.709293243275961]
+DCG = 8.464531852138228
+Ideal DCG = 9.027751897830187
+  NDCG = 0.9376123699381538
+NDCG for (rush, relatedto, ?) = 0.937612  (linear)
+NDCG for (rush, relatedto, ?) = 0.908635  (exponential)
+
+Process finished with exit code 0
+
+=============================================
+
+D:\python\python.exe D:/pyCharmWorkspace/ukg_BERT/src/prediction.py
+config: C:\Users\dryan\.keras\keras.json
+backend: tensorflow  was changed into theano.
+in the source file: d:\python\Lib\site-packages\keraackend\load_backend.py
+Using Theano backend.
+WARNING (theano.tensor.blas): Using NumPy C-API based implementation for BLAS functions.
+model: <keras.engine.sequential.Sequential object at 0x000001B8C0F2AA90>
+Model: "bert_fine_tuning_UKGE"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #
+=================================================================
+lstm_1 (LSTM)                (None, 768)               4721664
+_________________________________________________________________
+dense_1 (Dense)              (None, 1)                 769
+=================================================================
+Total params: 4,722,433
+Trainable params: 4,722,433
+Non-trainable params: 0
+_________________________________________________________________
+Model LOADED.
+ID_Dictionary READY.
+Embedding vectors LOADED.
+Original confidence LOADED.
+---------------
+ Predicting...
+---------------
+Prediction for (HEAD, RELATION, ?tail?) RANKING:
+Head = ' hotel '
+Relation = ' usedfor '
+  candidate 1 = ('chat with friends', 0.9800923)
+  candidate 2 = ('having fun', 0.9782274)
+  candidate 3 = ('going to party', 0.9706078)
+  candidate 4 = ('tourists', 0.9642709)
+  candidate 5 = ('make love', 0.962907)
+  candidate 6 = ('vacation', 0.9626798)
+  candidate 7 = ('live', 0.9623198)
+  candidate 8 = ('meeting friends', 0.957994)
+  candidate 9 = ('go to bathroom', 0.9567417)
+  candidate 10 = ('have lunch', 0.9546102)
+    seen fact ('sleep in', 0.9230513) & true value = 0.709293243275961
+    seen fact ('have sex', 0.9222916) & true value = 0.709293243275961
+    seen fact ('rest', 0.8949696) & true value = 0.9843765942967896
+    seen fact ('sleeping', 0.87353843) & true value = 1.0
+    seen fact ('sleep', 0.82789975) & true value = 0.8927087856574166
+    Total seen facts: 5 / 15036
+True ranking for ( hotel , usedfor , *tails* ):
+  attending rank facts: 5
+    true tail 1 : ('sleeping', 1.0)
+    true tail 2 : ('rest', 0.9843765942967896)
+    true tail 3 : ('sleep', 0.8927087856574166)
+    true tail 4 : ('have sex', 0.709293243275961)
+    true tail 5 : ('sleep in', 0.709293243275961)
+--------------------
+ NDCG evaluating...
+--------------------
+ndcg list: 5 [0.9230513, 0.9222916, 0.8949696, 0.87353843, 0.82789975]
+idcg list: 5 [0.709293243275961, 0.709293243275961, 0.9843765942967896, 1.0, 0.8927087856574166]
+  ranked idcg list: [1.0, 0.9843765942967896, 0.8927087856574166, 0.709293243275961, 0.709293243275961]
+DCG = 2.648925156533919
+Ideal DCG = 2.647294929882495
+  NDCG = 1.0006158084741605
+NDCG for (hotel, usedfor, ?) = 1.000616  (linear)
+NDCG for (hotel, usedfor, ?) = 0.993802  (exponential)
+
+Process finished with exit code 0
+
+================================================
+
+D:\python\python.exe D:/pyCharmWorkspace/ukg_BERT/src/prediction.py
+Using Theano backend.
+config: C:\Users\dryan\.keras\keras.json
+backend: tensorflow  was changed into theano.
+in the source file: d:\python\Lib\site-packages\keraackend\load_backend.py
+WARNING (theano.tensor.blas): Using NumPy C-API based implementation for BLAS functions.
+model: <keras.engine.sequential.Sequential object at 0x0000024E9619AA58>
+Model: "bert_fine_tuning_UKGE"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #
+=================================================================
+lstm_1 (LSTM)                (None, 768)               4721664
+_________________________________________________________________
+dense_1 (Dense)              (None, 1)                 769
+=================================================================
+Total params: 4,722,433
+Trainable params: 4,722,433
+Non-trainable params: 0
+_________________________________________________________________
+Model LOADED.
+ID_Dictionary READY.
+Embedding vectors LOADED.
+Original confidence LOADED.
+---------------
+ Predicting...
+---------------
+Prediction for (HEAD, RELATION, ?tail?) RANKING:
+Head = ' fork '
+Relation = ' isa '
+  candidate 1 = ('cut of beef', 0.99670756)
+  candidate 2 = ('hand tool', 0.9953597)
+  candidate 3 = ('small indefinite quantity', 0.99441224)
+  candidate 4 = ('edge tool', 0.9942094)
+  candidate 5 = ('smoothness', 0.9930627)
+  candidate 6 = ('fastener', 0.99278635)
+  candidate 7 = ('holding device', 0.9906645)
+  candidate 8 = ('create from raw material', 0.9906335)
+  candidate 9 = ('kitchen appliance', 0.9885494)
+  candidate 10 = ('liquid unit', 0.9885478)
+    seen fact ('cutlery', 0.97383875) & true value = 0.8927087856574166
+    seen fact ('kitchen utensil', 0.9624536) & true value = 0.709293243275961
+    seen fact ('form', 0.9328347) & true value = 0.8927087856574166
+    seen fact ('tableware', 0.9017381) & true value = 0.709293243275961
+    seen fact ('silverware', 0.9003886) & true value = 0.709293243275961
+    seen fact ('attack', 0.86547947) & true value = 0.8927087856574166
+    Total seen facts: 6 / 15036
+True ranking for ( fork , isa , *tails* ):
+  attending rank facts: 6
+    true tail 1 : ('cutlery', 0.8927087856574166)
+    true tail 2 : ('form', 0.8927087856574166)
+    true tail 3 : ('attack', 0.8927087856574166)
+    true tail 4 : ('tableware', 0.709293243275961)
+    true tail 5 : ('silverware', 0.709293243275961)
+    true tail 6 : ('kitchen utensil', 0.709293243275961)
+--------------------
+ NDCG evaluating...
+--------------------
+ndcg list: 6 [0.97383875, 0.9624536, 0.9328347, 0.9017381, 0.9003886, 0.86547947]
+idcg list: 6 [0.8927087856574166, 0.709293243275961, 0.8927087856574166, 0.709293243275961, 0.709293243275961, 0.8927087856574166]
+  ranked idcg list: [0.8927087856574166, 0.8927087856574166, 0.8927087856574166, 0.709293243275961, 0.709293243275961, 0.709293243275961]
+linear DCG = 3.0924620324691436
+Ideal DCG = 2.734823118646693
+  NDCG = 1.13077222851598
+exponential DCG = 3.0190649762787203
+Ideal DCG = 2.570806100992501
+  NDCG = 1.1743651048257437
+linear NDCG for (fork, isa, ?) = 1.130772
+exponetial NDCG for (fork, isa, ?) = 1.174365
+
+Process finished with exit code 0
+
+=============================================
+
+D:\python\python.exe D:/pyCharmWorkspace/ukg_BERT/src/prediction.py
+Using Theano backend.
+config: C:\Users\dryan\.keras\keras.json
+backend: tensorflow  was changed into theano.
+in the source file: d:\python\Lib\site-packages\keraackend\load_backend.py
+WARNING (theano.tensor.blas): Using NumPy C-API based implementation for BLAS functions.
+model: <keras.engine.sequential.Sequential object at 0x000001B49907BA20>
+Model: "bert_fine_tuning_UKGE"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #
+=================================================================
+lstm_1 (LSTM)                (None, 768)               4721664
+_________________________________________________________________
+dense_1 (Dense)              (None, 1)                 769
+=================================================================
+Total params: 4,722,433
+Trainable params: 4,722,433
+Non-trainable params: 0
+_________________________________________________________________
+Model LOADED.
+ID_Dictionary READY.
+Embedding vectors LOADED.
+Original confidence LOADED.
+---------------
+ Predicting...
+---------------
+Prediction for (HEAD, RELATION, ?tail?) RANKING:
+Head = ' fork '
+Relation = ' atlocation '
+  candidate 1 = ('bowling alley', 0.987009)
+  candidate 2 = ('silo', 0.97723526)
+  candidate 3 = ('supermarket', 0.9745813)
+  candidate 4 = ('fridge', 0.97182584)
+  candidate 5 = ('telephone booth', 0.96612895)
+  candidate 6 = ('desktop', 0.9614295)
+  candidate 7 = ('kitchen', 0.9596902)
+  candidate 8 = ('grocery store', 0.9545361)
+  candidate 9 = ('refrigerator', 0.95435786)
+  candidate 10 = ('kitchen drawer', 0.9538182)
+    seen fact ('salad', 0.9480357) & true value = 0.709293243275961
+    seen fact ('table', 0.8933529) & true value = 1.0
+    seen fact ('road', 0.8744901) & true value = 0.9843765942967896
+    seen fact ('drawer', 0.85307914) & true value = 1.0
+    seen fact ('resturant', 0.82390535) & true value = 0.709293243275961
+    seen fact ('plate', 0.82147527) & true value = 0.9843765942967896
+    seen fact ('a', 0.7860881) & true value = 0.709293243275961
+    seen fact ('back', 0.7715281) & true value = 0.709293243275961
+    seen fact ('napkin', 0.6592017) & true value = 0.709293243275961
+    Total seen facts: 9 / 15036
+True ranking for ( fork , atlocation , *tails* ):
+  attending rank facts: 9
+    true tail 1 : ('table', 1.0)
+    true tail 2 : ('drawer', 1.0)
+    true tail 3 : ('road', 0.9843765942967896)
+    true tail 4 : ('plate', 0.9843765942967896)
+    true tail 5 : ('back', 0.709293243275961)
+    true tail 6 : ('a', 0.709293243275961)
+    true tail 7 : ('napkin', 0.709293243275961)
+    true tail 8 : ('salad', 0.709293243275961)
+    true tail 9 : ('resturant', 0.709293243275961)
+--------------------
+ NDCG evaluating...
+--------------------
+ndcg list: 9 [0.9480357, 0.8933529, 0.8744901, 0.85307914, 0.82390535, 0.82147527, 0.7860881, 0.7715281, 0.6592017]
+idcg list: 9 [0.709293243275961, 1.0, 0.9843765942967896, 1.0, 0.709293243275961, 0.9843765942967896, 0.709293243275961, 0.709293243275961, 0.709293243275961]
+  ranked idcg list: [1.0, 1.0, 0.9843765942967896, 0.9843765942967896, 0.709293243275961, 0.709293243275961, 0.709293243275961, 0.709293243275961, 0.709293243275961]
+DCG = 3.6315292525282254
+Ideal DCG = 3.7478201361702985
+  NDCG = 0.9689710606654394
+DCG = 3.444334210185695
+Ideal DCG = 3.616546885014093
+  NDCG = 0.9523820151365943
+linear NDCG for (fork, atlocation, ?) = 0.968971
+exponetial NDCG for (fork, atlocation, ?) = 0.952382
+
+Process finished with exit code 0

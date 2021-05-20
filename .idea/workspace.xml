@@ -20,6 +20,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="04e7e93c-d3a7-4f4b-813c-1f3b4f12f212" name="Default Changelist" comment="additional information of readme">
+      <change afterPath="$PROJECT_DIR$/bertmodel/obtain_bert_model.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/cn15k/test.tsv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/cn15k/train.tsv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/cn15k/val.tsv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/ppi5k/test.tsv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/ppi5k/train.tsv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/ppi5k/val.tsv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/2020-12-31 metrics.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/20210101 lstm.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/final-ppi5k-lstm.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/lstm 20210106.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/prediction-over-cn15k.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -81,7 +94,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620907678298</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="additional information of readme">
+      <created>1620907782914</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1620907782914</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -94,6 +114,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -111,9 +132,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="589" y="119" key="Github.UntrackedFilesDialog/0.0.1536.824@0.0.1536.824" timestamp="1620892877082" />
-    <state x="361" y="148" key="Vcs.Push.Dialog.v2" timestamp="1620907682174">
+    <state x="361" y="148" key="Vcs.Push.Dialog.v2" timestamp="1620907868367">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="148" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1620907682174" />
+    <state x="361" y="148" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1620907868367" />
   </component>
 </project>
