@@ -19,19 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="04e7e93c-d3a7-4f4b-813c-1f3b4f12f212" name="Default Changelist" comment="additional information of readme">
-      <change afterPath="$PROJECT_DIR$/bertmodel/obtain_bert_model.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/cn15k/test.tsv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/cn15k/train.tsv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/cn15k/val.tsv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/ppi5k/test.tsv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/ppi5k/train.tsv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/ppi5k/val.tsv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/2020-12-31 metrics.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/20210101 lstm.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/final-ppi5k-lstm.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/lstm 20210106.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/prediction-over-cn15k.txt" afterDir="false" />
+    <list default="true" id="04e7e93c-d3a7-4f4b-813c-1f3b4f12f212" name="Default Changelist" comment="upload additional files">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
     </list>
@@ -101,7 +89,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620907782914</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="upload additional files">
+      <created>1621470174381</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1621470174381</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -121,7 +116,8 @@
     <MESSAGE value="uploading sources" />
     <MESSAGE value="pickle data utility" />
     <MESSAGE value="additional information of readme" />
-    <option name="LAST_COMMIT_MESSAGE" value="additional information of readme" />
+    <MESSAGE value="upload additional files" />
+    <option name="LAST_COMMIT_MESSAGE" value="upload additional files" />
   </component>
   <component name="WindowStateProjectService">
     <state x="640" y="314" key="Github.ShareDialog" timestamp="1620892850921">
@@ -132,9 +128,13 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="589" y="119" key="Github.UntrackedFilesDialog/0.0.1536.824@0.0.1536.824" timestamp="1620892877082" />
-    <state x="361" y="148" key="Vcs.Push.Dialog.v2" timestamp="1620907868367">
+    <state x="361" y="148" key="Vcs.Push.Dialog.v2" timestamp="1621470290724">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="148" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1620907868367" />
+    <state x="361" y="148" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1621470290724" />
+    <state x="575" y="328" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1621470129844">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="575" y="328" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1621470129844" />
   </component>
 </project>
