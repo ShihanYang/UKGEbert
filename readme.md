@@ -2,9 +2,8 @@
 Uncertain Knowledge Graphs Embedding is implemented by means of BERT pretrained natural language model. Exploring approximate inference on the embedding space. Considering the commonsense reasoning based on these works.
 
 ## Environment require
-* python 3.6
+* python 3.7
 * pytorch 1.6.0+cpu
-* keras 2.3.1 with Theano 1.0.1 backend
 * transformers 4.0.0
 * pretrained BERT models, such as 'bert-base-uncased': "https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased.tar.gz", etc.
 

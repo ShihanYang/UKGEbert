@@ -4,9 +4,9 @@
 @File Name: kgbert2.py
 @Author: Shihan Yang
 @E-Mail: dr.yangsh@kust.edu.cn
-@Create Date: 2020/12/17
+@Create Date: 2022/7/12
 @Update Date: 
-@Version: 0.1.0
+@Version: 0.1.1
 @Functions: 
     1. To input triples into bert without confidence as (head, relation, tail)
     2. Notes:
