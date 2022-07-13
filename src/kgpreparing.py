@@ -15,6 +15,7 @@
 
 import os
 basedir = os.path.abspath("..")
+# basedir = "D:\\pyCharmWorkspace\\ukg_BERT"  # for testing
 print("Base directory : ", basedir)
 data_name = 'cn15k\\'
 data_path = basedir + '\\data\\'

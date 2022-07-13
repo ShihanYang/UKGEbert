@@ -22,18 +22,23 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="04e7e93c-d3a7-4f4b-813c-1f3b4f12f212" name="Default Changelist" comment="revise readme file.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/kgbert2.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/kgbert2.py" afterDir="false" />
+    <list default="true" id="04e7e93c-d3a7-4f4b-813c-1f3b4f12f212" name="Default Changelist" comment="changed for better reasoning">
+      <change afterPath="$PROJECT_DIR$/data/cn15k/entity.vec" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/cn15k/model_e100_768d.h5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/cn15k/relation.vec" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gittoken" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ChangesViewManager" show_ignored="true" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="1sTNfvgKL8KFyHYrEpcQcHSBez2" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -43,13 +48,90 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
+  }
+}]]></component>
+  <component name="Push.Settings">
+    <option name="SHOW_DETAILS_PANEL" value="false" />
+  </component>
+  <component name="RunManager" selected="Python.reasoner">
+    <configuration name="kgbert2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="UKGEbert" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/kgbert2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="kgpreparing" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="UKGEbert" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/kgpreparing.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="reasoner" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="UKGEbert" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/reasoner.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.reasoner" />
+        <item itemvalue="Python.kgbert2" />
+        <item itemvalue="Python.kgpreparing" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\dryan\AppData\Roaming\Subversion</configuration>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="04e7e93c-d3a7-4f4b-813c-1f3b4f12f212" name="Default Changelist" comment="" />
@@ -114,7 +196,56 @@
       <option name="project" value="LOCAL" />
       <updated>1627786925301</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="revise readme file.">
+      <created>1657590953245</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1657590953245</updated>
+    </task>
+    <task id="LOCAL-00010" summary="changed for better reasoning">
+      <created>1657597485117</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1657597485117</updated>
+    </task>
+    <task id="LOCAL-00011" summary="changed for better reasoning">
+      <created>1657597734753</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1657597734753</updated>
+    </task>
+    <task id="LOCAL-00012" summary="changed for better reasoning">
+      <created>1657597765567</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1657597765567</updated>
+    </task>
+    <task id="LOCAL-00013" summary="changed for better reasoning">
+      <created>1657671732509</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1657671732509</updated>
+    </task>
+    <task id="LOCAL-00014" summary="changed for better reasoning">
+      <created>1657672171027</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1657672171027</updated>
+    </task>
+    <task id="LOCAL-00015" summary="changed for better reasoning">
+      <created>1657682763247</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1657682763247</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -122,12 +253,17 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ID_WIDTH">
+                <map>
+                  <entry key="Table.Space.CommitStatus.ColumnIdWidth" value="37" />
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -136,28 +272,7 @@
     <MESSAGE value="additional information of readme" />
     <MESSAGE value="upload additional files" />
     <MESSAGE value="revise readme file." />
-    <option name="LAST_COMMIT_MESSAGE" value="revise readme file." />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="640" y="314" key="Github.ShareDialog" timestamp="1620892850921">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="640" y="314" key="Github.ShareDialog/0.0.1536.824@0.0.1536.824" timestamp="1620892850921" />
-    <state x="589" y="119" key="Github.UntrackedFilesDialog" timestamp="1620892877082">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="589" y="119" key="Github.UntrackedFilesDialog/0.0.1536.824@0.0.1536.824" timestamp="1620892877082" />
-    <state x="272" y="58" key="SettingsEditor" timestamp="1627788330503">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="272" y="58" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1627788330503" />
-    <state x="361" y="148" key="Vcs.Push.Dialog.v2" timestamp="1627786928850">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="361" y="148" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1627786928850" />
-    <state x="575" y="328" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1621470129844">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="575" y="328" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1621470129844" />
+    <MESSAGE value="changed for better reasoning" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed for better reasoning" />
   </component>
 </project>

@@ -5,8 +5,8 @@
 @Author: Shihan Yang
 @E-Mail: dr.yangsh@kust.edu.cn
 @Create Date: 2021/04/26
-@Update Date: 
-@Version: 0.1.0
+@Update Date: 2022/07/12
+@Version: 0.1.1
 @Functions: 
     1. To do some kinds of reasoning, or commonsense reasoning on CN15k datasets
     2. Notes: a tail inferring by confidence prediction
@@ -31,7 +31,6 @@ entity_vec_file = base + 'entity.vec'
 relation_vec_file = base + 'relation.vec'
 
 model = load_model(model_file)
-print('model:', model)
 model.summary()
 print('Model LOADED.')
 
@@ -89,16 +88,30 @@ print('Original confidence LOADED with %d facts.\n' % (len(triple_with_confidenc
 
 # using prediction model as following:
 print('An example of predicting confidence of a fact:')
-head = 'fork'
-head = 'machine'
+# head = 'fork'
+# head = 'machine'
+# head = 'introduction'
+head = 'cat'
+# relation = 'isa'
+# relation = 'createdby'
+# relation = 'isa'
 relation = 'isa'
-relation = 'createdby'
-tail = 'hand tool'
-tail = 'people'
+# tail = 'hand tool'
+# tail = 'people'
+# tail = 'textbook'
+tail = 'mammal'
 triplet = [head, relation, tail]
 triplet_vectors = [[embedding[x] for x in triplet[:3]]]
 predicted_confidence = model.predict(np.asarray(triplet_vectors), verbose=0)[0][0]
-print('  The confidence of (%s, %s, %s) is %f.' % (head, relation, tail, predicted_confidence))
+print('  The confidence of (%s, %s, %s) is predicted as %f.' % (head, relation, tail, predicted_confidence))
+occurence = 'is not'
+confidence = 'N/A'
+triplet_id = (int(word_id[triplet[0]]), int(relation_id[triplet[1]][1:]), int(word_id[triplet[2]]))  # 'r' prefix should be dropped
+if triplet_id in triple_with_confidence:
+    occurence = 'is'
+    confidence = str(triple_with_confidence[triplet_id])
+print('    where the fact ((%s, %s, %s) = %s) %s occurred in the knowledge base.' %
+      (head, relation, tail, confidence, occurence))
 # using prediction model as above.
 
 

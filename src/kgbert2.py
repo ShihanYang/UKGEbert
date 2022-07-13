@@ -22,6 +22,7 @@ print("Base directory : ", basedir)
 model_name = 'bert-base-uncased'
 model_path = basedir + '\\models\\'
 model_base = model_path + model_name
+# model_base = 'D:\\pyCharmWorkspace\\ukg_BERT\\models\\' + model_name  # for testing
 print("Pre-trained model directory : ", model_base)
 data_name = 'cn15k\\'
 data_path = basedir + '\\data\\'
@@ -31,7 +32,7 @@ print('Dataset directory : ', data_base)
 import torch
 from transformers import BertModel, BertTokenizer, BertConfig
 
-tokenizer = BertTokenizer.from_pretrained(model_base)
+tokenizer = BertTokenizer.from_pretrained(model_base)  # best to use local downloaded models
 config = BertConfig.from_pretrained(model_base, output_hidden_states=True)
 model = BertModel.from_pretrained(model_base, config=config)
 model.train()
