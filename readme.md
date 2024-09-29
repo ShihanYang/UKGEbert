@@ -3,7 +3,7 @@ Uncertain Knowledge Graphs Embedding is implemented by means of BERT pretrained 
 
 ## Environment require
 * python 3.9
-* pytorch 1.6.0+cpu
+* pytorch 2.0.0+cpu
 * pretrained BERT models, such as 'bert-base-uncased': "https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased.tar.gz", etc.
 
 ## Uncertain Knowledge Graphs datasets for benchmark
