@@ -22,11 +22,17 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="04e7e93c-d3a7-4f4b-813c-1f3b4f12f212" name="Default Changelist" comment="changed for better reasoning">
+    <list default="true" id="04e7e93c-d3a7-4f4b-813c-1f3b4f12f212" name="Default Changelist" comment="changed for bayesian network inference">
+      <change afterPath="$PROJECT_DIR$/data/bio.csv" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/data/cn15k/entity.vec" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/data/cn15k/model_e100_768d.h5" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/data/cn15k/relation.vec" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gittoken" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bayesianet.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/UKGEbert.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/UKGEbert.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reasoner.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/reasoner.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +40,20 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ChangesViewManager" show_ignored="true" />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--follow-tags" />
+        <option name="title" value="Current Branch" />
+      </GitPushTagMode>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -48,15 +67,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;
   }
-}]]></component>
-  <component name="Push.Settings">
-    <option name="SHOW_DETAILS_PANEL" value="false" />
-  </component>
-  <component name="RunManager" selected="Python.reasoner">
+}</component>
+  <component name="RunManager" selected="Python.bayesianet">
+    <configuration name="bayesianet" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="UKGEbert" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/bayesianet.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="kgbert2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="UKGEbert" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -122,6 +159,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.bayesianet" />
         <item itemvalue="Python.reasoner" />
         <item itemvalue="Python.kgbert2" />
         <item itemvalue="Python.kgpreparing" />
@@ -245,7 +283,112 @@
       <option name="project" value="LOCAL" />
       <updated>1657682763247</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="changed for better reasoning">
+      <created>1657682922490</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1657682922490</updated>
+    </task>
+    <task id="LOCAL-00017" summary="changed for better reasoning">
+      <created>1684315243252</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1684315243252</updated>
+    </task>
+    <task id="LOCAL-00018" summary="changed for better reasoning">
+      <created>1726659381859</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1726659381859</updated>
+    </task>
+    <task id="LOCAL-00019" summary="changed for bayesian network related">
+      <created>1726661228611</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1726661228611</updated>
+    </task>
+    <task id="LOCAL-00020" summary="changed for bayesian network related">
+      <created>1726661242354</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1726661242354</updated>
+    </task>
+    <task id="LOCAL-00021" summary="changed for bayesian network related">
+      <created>1727269684445</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1727269684445</updated>
+    </task>
+    <task id="LOCAL-00022" summary="changed for bayesian network related">
+      <created>1727270558159</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1727270558159</updated>
+    </task>
+    <task id="LOCAL-00023" summary="changed for bayesian network related">
+      <created>1727270731910</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1727270731910</updated>
+    </task>
+    <task id="LOCAL-00024" summary="changed for bayesian network inference">
+      <created>1727580492343</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1727580492343</updated>
+    </task>
+    <task id="LOCAL-00025" summary="changed for bayesian network inference">
+      <created>1727595968434</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1727595968434</updated>
+    </task>
+    <task id="LOCAL-00026" summary="changed for bayesian network inference">
+      <created>1727596564464</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1727596564464</updated>
+    </task>
+    <task id="LOCAL-00027" summary="changed for bayesian network inference">
+      <created>1727599821067</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1727599821067</updated>
+    </task>
+    <task id="LOCAL-00028" summary="changed for bayesian network inference">
+      <created>1727599977540</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1727599977540</updated>
+    </task>
+    <task id="LOCAL-00029" summary="changed for bayesian network inference">
+      <created>1727600741967</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1727600741967</updated>
+    </task>
+    <task id="LOCAL-00030" summary="changed for bayesian network inference">
+      <created>1727602205780</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1727602205780</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -256,7 +399,9 @@
             <State>
               <option name="COLUMN_ID_WIDTH">
                 <map>
-                  <entry key="Table.Space.CommitStatus.ColumnIdWidth" value="37" />
+                  <entry key="Table.Default.Author.ColumnIdWidth" value="65" />
+                  <entry key="Table.Default.Date.ColumnIdWidth" value="94" />
+                  <entry key="Table.Space.CommitStatus.ColumnIdWidth" value="32" />
                 </map>
               </option>
             </State>
@@ -273,6 +418,9 @@
     <MESSAGE value="upload additional files" />
     <MESSAGE value="revise readme file." />
     <MESSAGE value="changed for better reasoning" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed for better reasoning" />
+    <MESSAGE value="changed for" />
+    <MESSAGE value="changed for bayesian network related" />
+    <MESSAGE value="changed for bayesian network inference" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed for bayesian network inference" />
   </component>
 </project>

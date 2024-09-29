@@ -5,7 +5,7 @@
 @Author: Shihan Yang
 @E-Mail: dr.yangsh@kust.edu.cn
 @Create Date: 2021/04/26
-@Update Date: 2022/07/12
+@Update Date: 2023/05/17
 @Version: 0.1.1
 @Functions: 
     1. To do some kinds of reasoning, or commonsense reasoning on CN15k datasets
@@ -19,6 +19,7 @@
 import os
 import time
 import tqdm
+
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'  # only ERROR messages
 import numpy as np
 from keras.models import load_model
@@ -73,7 +74,7 @@ print('Embedding vectors LOADED.')
 
 original_file = base + 'train.tsv'
 original_file_2 = base + 'test.tsv'
-triple_with_confidence = dict()  # like {(h_id,r_id,t_id):confidence, }, (int,int,int):float
+triple_with_confidence = dict()  # like {(h_id,r_id,t_id):confidence, } with type schema (int,int,int):float
 with open(original_file, 'r') as of, open(original_file_2, 'r') as of2:
     r_lines = of.readlines()
     for r in r_lines:
@@ -84,7 +85,6 @@ with open(original_file, 'r') as of, open(original_file_2, 'r') as of2:
         rl = r.strip().split()
         triple_with_confidence[(int(rl[0]), int(rl[1]), int(rl[2]))] = float(rl[3])
 print('Original confidence LOADED with %d facts.\n' % (len(triple_with_confidence)))
-
 
 # using prediction model as following:
 print('An example of predicting confidence of a fact:')
@@ -106,7 +106,8 @@ predicted_confidence = model.predict(np.asarray(triplet_vectors), verbose=0)[0][
 print('  The confidence of (%s, %s, %s) is predicted as %f.' % (head, relation, tail, predicted_confidence))
 occurence = 'is not'
 confidence = 'N/A'
-triplet_id = (int(word_id[triplet[0]]), int(relation_id[triplet[1]][1:]), int(word_id[triplet[2]]))  # 'r' prefix should be dropped
+triplet_id = (
+int(word_id[triplet[0]]), int(relation_id[triplet[1]][1:]), int(word_id[triplet[2]]))  # 'r' prefix should be dropped
 if triplet_id in triple_with_confidence:
     occurence = 'is'
     confidence = str(triple_with_confidence[triplet_id])
@@ -128,34 +129,44 @@ accuracy rate: (like ndcg computing, check whether top 1 in ranked list of all s
 print('\n--------------------')
 print(' tail predicting... ')
 print('--------------------')
-# def tail_prediction(head, relation, verbose=0, topk=5):
-#     head = head
-#     relation = relation
-#     topk = topk
-#     candidate = {x+1 : ('', 0) for x in range(topk)}
-#     for tail in word_id.keys():
-#         if tail == head or 'r' in word_id[tail]:
-#             continue
-#         triplet = [head, relation, tail]
-#         tv = [[embedding[x] for x in triplet[:3]]]
-#         score = model.predict(np.asarray(tv), verbose=0)[0][0]
-#         min_rank = min(candidate, key=lambda x: candidate[x][1])
-#         if score > candidate[min_rank][1]:
-#             candidate[min_rank] = (tail, score)
-#     rank = sorted(candidate, key=lambda x: candidate[x][1], reverse=True)
-#     # rank likes [885, 11259, 1163, 7798, 5149, 7946, ....]
-#     if verbose == 1:
-#         print('Prediction for (HEAD, RELATION, ?tail?) RANKING:')
-#         print('Head = \'', head, '\'')
-#         print('Relation = \'', relation, '\'')
-#         # listing top k candidate tails
-#         for i in range(topk):
-#             print('  tail candidate %d = %s' % (i + 1, candidate[rank[i]]))
-#     return candidate, rank
-# tail_prediction('fork', 'isa', verbose = 1)
+
+def tail_prediction(head, relation, verbose=0, topk=5):
+    head = head
+    relation = relation
+    topk = topk
+    candidate = {x + 1: ('', 0) for x in range(topk)}
+    for tail in word_id.keys():
+        if tail == head or 'r' in word_id[tail]:
+            continue
+        triplet = [head, relation, tail]
+        tv = [[embedding[x] for x in triplet[:3]]]
+        score = model.predict(np.asarray(tv), verbose=0)[0][0]
+        min_rank = min(candidate, key=lambda x: candidate[x][1])
+        if score > candidate[min_rank][1]:
+            candidate[min_rank] = (tail, score)
+    rank = sorted(candidate, key=lambda x: candidate[x][1], reverse=True)
+    # rank likes [885, 11259, 1163, 7798, 5149, 7946, ....]
+    if verbose == 1:
+        print('Prediction for (HEAD, RELATION, ?tail?) RANKING:')
+        print('Head = \'', head, '\'')
+        print('Relation = \'', relation, '\'')
+        # listing top k candidate tails
+        for i in range(topk):
+            print('  tail candidate %d = %s' % (i + 1, candidate[rank[i]]))
+    return candidate, rank
+
+# head = 'fork'
+# relation = 'isa'
+# tail_prediction(head, relation, verbose = 1)  # a little long time to run this function
+#      tail candidate 1 = ('cut of beef', 0.9967075)
+#      tail candidate 2 = ('hand tool', 0.9953598)
+#      tail candidate 3 = ('small indefinite quantity', 0.9944122)
+#      tail candidate 4 = ('edge tool', 0.9942094)
+#      tail candidate 5 = ('smoothness', 0.9930627)
+
 
 print('\n--------------------------------')
-print(' tail prediction accuracy rate... ')
+print(' tail prediction accuracy rate... ')  # too long time to run this snippet
 print('----------------------------------')
 # test_triples = list()
 # with open(test_file, 'r') as f:
@@ -195,7 +206,7 @@ print('\n---------------------------')
 print(' transitivity inferring... ')
 print('---------------------------')
 '''
-It is also a query (A,?r,C), for (A,R,B) and (B,R,C) implies (A,R,C), to check whether the top 1 candidate
+It is also a query (A,?r,C), for (A,R,B) and (B,R,C) implies (A,R,C), to check whether the first ranked candidate
 of ?r is the R relation.  
 '''
 head = 'kitten'  # (fork,atlocation,kitchen) and (kitchen,atloaction,apartment)
@@ -219,7 +230,6 @@ rank = sorted(candidate, key=lambda x: candidate[x][1], reverse=True)
 for i in range(topk):
     print('  relation candidate %d = %s' % (i + 1, candidate[rank[i]]))
 
-
 ############################################
 # INFERRING CASE -- combination reasoning
 ############################################
@@ -227,7 +237,7 @@ print('\n---------------------------')
 print(' combination inferring... ')
 print('---------------------------')
 '''
-It is also a query (A,?r,C), for (A,R1,B) and (B,R2,C) implies (A,R3,C), to check whether the top 1 candidate
+It is also a query (A,?r,C), for (A,R1,B) and (B,R2,C) implies (A,R3,C), to check whether the first ranked candidate
 of ?r is the R3 relation, which is some kind of commonsense inferring.  
 '''
 head = 'car'
@@ -251,9 +261,9 @@ for i in range(topk):
     print('  relation candidate %d = %s' % (i + 1, candidate[rank[i]]))
 
 
-############################################
-# INFERRING CASE -- commonsense reasoning
-############################################
+#############################################
+# INFERRING CASE -- commonsense reasoning        # modified @ 20230517
+#############################################
 print('\n---------------------------')
 print(' commonsense inferring... ')
 print('---------------------------')
@@ -286,3 +296,37 @@ commonsense inferring:  Common sense inference vs. Mathematical inference
         + Depth-first exploration
         + Batch processing
 '''
+# When something are not in the KB, could a commonsense result be given out?
+#     fact          predicted conference 1  / predicted conference 2
+#                              o_t 1 = (fork,atlocation,kitchen) c1 = 0.834  /  0.9596903
+# t_1 =(fork,locatednear,kitchen)  c1 = 0.80969024
+#                              o_t 2 = (fork,isa,tool) c2 = 0.917   /  0.8806638
+#                              oo_t 2 = (fork,isa,hand tool) c2 = -  /   0.9953598
+# t_2 = (fork,usedfor,hand tool) c2 = 0.8669853
+# t 3 = (hand tool,madeof,metal) c3 = 0.8128084
+#                              o_t 3 = (tool,madeof,metal) c3 = 0.747   /  0.82053685
+#                              o_t 4 = (kitchen,hasa,metal)  c4 = 0.749   /   0.6310432
+# t 5 = (metal,atlocation,kitchen) c5 = -   /   0.8751057
+# c1*c2*c3 = 0.8097*0.8670*0.8128 = 0.5706
+head = 'fork'  # 'wife'
+# tail = 'husband'  # not in the entity set, neither the vertor of it in verset
+tail = 'kitchen'  # 'woman'
+relation = ''
+# searching one relation in the relation.vec
+topk = 15
+candidate = {x + 1: ('', 0) for x in range(topk)}
+for relation in word_id.keys():
+    if 'r' in word_id[relation]:
+        triplet = [head, relation, tail]
+        tv = [[embedding[x] for x in triplet[:3]]]
+        score = model.predict(np.asarray(tv), verbose=0)[0][0]
+        min_rank = min(candidate, key=lambda x: candidate[x][1])
+        if score > candidate[min_rank][1]:
+            candidate[min_rank] = (relation, score)
+print('Prediction for (HEAD, ?relation?, TAIL) RANKING:')
+print('Head = \'', head, '\'')
+print('Tail = \'', tail, '\'')
+rank = sorted(candidate, key=lambda x: candidate[x][1], reverse=True)
+# listing top k candidate tails
+for i in range(topk):
+    print('  relation candidate %d = %s' % (i + 1, candidate[rank[i]]))

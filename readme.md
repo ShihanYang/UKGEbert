@@ -1,10 +1,9 @@
-# UKGE based on BERT  
+# UKGE based on BERT and Bayesian Network  
 Uncertain Knowledge Graphs Embedding is implemented by means of BERT pretrained natural language model. Exploring approximate inference on the embedding space. Considering the commonsense reasoning based on these works.
 
 ## Environment require
-* python 3.7
+* python 3.9
 * pytorch 1.6.0+cpu
-* transformers 4.0.0
 * pretrained BERT models, such as 'bert-base-uncased': "https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased.tar.gz", etc.
 
 ## Uncertain Knowledge Graphs datasets for benchmark
