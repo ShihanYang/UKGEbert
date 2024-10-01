@@ -6,8 +6,6 @@ apple,  is,  fruit,  0.95
 apple,  is,  mobilephone,  0.788
 cell,  sameas,  mobilephone, 0.90
 mobile,  sameas,  cell,  0.78
-pet,  is,  animal,  0.89
-animal,  is,  pet, 0.40
 pet,  sameas,  animal,  0.72
 fruit,  from,  tree,  0.65
 peach,  is,  fruit,  0.89
