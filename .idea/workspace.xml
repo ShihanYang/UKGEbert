@@ -23,16 +23,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="04e7e93c-d3a7-4f4b-813c-1f3b4f12f212" name="Default Changelist" comment="changed for bayesian network inference">
-      <change afterPath="$PROJECT_DIR$/data/bio.csv" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/data/cn15k/entity.vec" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/data/cn15k/model_e100_768d.h5" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/data/cn15k/relation.vec" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/bayesianet.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/UKGEbert.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/UKGEbert.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/token.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reasoner.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/reasoner.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bayesianet.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/bayesianet.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -388,7 +384,21 @@
       <option name="project" value="LOCAL" />
       <updated>1727602205780</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="changed for bayesian network inference">
+      <created>1727604459799</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1727604459799</updated>
+    </task>
+    <task id="LOCAL-00032" summary="changed for bayesian network inference">
+      <created>1727605150749</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1727605150749</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
