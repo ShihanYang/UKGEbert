@@ -28,6 +28,7 @@
       <change afterPath="$PROJECT_DIR$/data/cn15k/relation.vec" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/data/token.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bayesianet.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/bayesianet.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/inferConfwithBN.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/inferConfwithBN.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -54,12 +55,6 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
-  </component>
-  <component name="ProblemsViewState">
-    <hideBySeverity>
-      <option value="200" />
-      <option value="300" />
-    </hideBySeverity>
   </component>
   <component name="ProjectId" id="1sTNfvgKL8KFyHYrEpcQcHSBez2" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -440,21 +435,7 @@
       <option name="project" value="LOCAL" />
       <updated>1728097597464</updated>
     </task>
-    <task id="LOCAL-00035" summary="bayesian network inference">
-      <created>1728099023941</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1728099023941</updated>
-    </task>
-    <task id="LOCAL-00036" summary="bayesian network inference">
-      <created>1728099496320</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1728099496320</updated>
-    </task>
-    <option name="localTasksCounter" value="37" />
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
