@@ -637,7 +637,7 @@ if __name__ == "__main__":
 
     print(confidences)
 
-    X = np.array([i for i in range(4, len(confidences))])  # drop the first 4 trival values
+    X = np.array([i for i in range(4, len(confidences))])  # drop the first 4 trivial values
     Y = np.array([100*i for i in confidences[4:]])
 
     coefficients = np.polyfit(X, Y, 1)

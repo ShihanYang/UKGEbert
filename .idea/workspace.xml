@@ -22,15 +22,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="04e7e93c-d3a7-4f4b-813c-1f3b4f12f212" name="Default Changelist" comment="changed for bayesian network inference using">
+    <list default="true" id="04e7e93c-d3a7-4f4b-813c-1f3b4f12f212" name="Default Changelist" comment="bayesian network inference">
       <change afterPath="$PROJECT_DIR$/data/cn15k/entity.vec" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/data/cn15k/model_e100_768d.h5" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/data/cn15k/relation.vec" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/data/token.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/inferConfwithBN.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/bio.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/bio.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/bayesianet.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/bayesianet.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/inferConfwithBN.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/inferConfwithBN.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -429,7 +428,14 @@
       <option name="project" value="LOCAL" />
       <updated>1727794000452</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="bayesian network inference">
+      <created>1728097597464</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1728097597464</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -463,6 +469,7 @@
     <MESSAGE value="changed for bayesian network related" />
     <MESSAGE value="changed for bayesian network inference" />
     <MESSAGE value="changed for bayesian network inference using" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed for bayesian network inference using" />
+    <MESSAGE value="bayesian network inference" />
+    <option name="LAST_COMMIT_MESSAGE" value="bayesian network inference" />
   </component>
 </project>

@@ -33,7 +33,7 @@ bn_file = '../data/cn15k/bayesiannet.pkl'
 bayesianNet.save(bn_file)
 
 
-# load bayesian network from pickel file
+# load bayesian network from pickle file
 bayesianNet = net.BN()
 bn_file = '../data/cn15k/bayesiannet.pkl'
 bayesianNet = net.BN.load(bn_file)
@@ -51,8 +51,35 @@ with open(test_file, mode='r', encoding='utf-8') as tf:
 
 print(len(triple_confidence))
 
-# prediction for each testing triple
+fact_0 = ()
+fact_0_confidences = list()
+# Prediction for each testing triple
+for fact in triple_confidence.keys():
+    f = net.Fact().factFromTriple(fact)
+    conf = bayesianNet.inferFact(f)
+    triple_prediction[fact] = conf
+    bayesianNet.addFact(f)
 
-# testing for adding evidence to raise posterior probability
+    # testing for adding evidence to raise posterior probability
+    fact_0.relation.name = fact_0.relation.name[:fact_0.relation.name.find('~')]
+    fact_0_conf = bayesianNet.inferFact(fact_0)
+    fact_0_confidences.append(fact_0_conf)
 
+# Computing MSE, MAE, linear NDCG, and exponential NDCG
+
+
+
+# Visualization of testing for adding evidence to raise posterior probability
+X = np.array([i for i in range(4, len(fact_0_confidences))])  # drop some trivial values
+Y = np.array([100*i for i in fact_0_confidences[4:]])
+
+coefficients = np.polyfit(X, Y, 1)
+polynomial = np.poly1d(coefficients)
+Y_ = polynomial(X)  # linear fitting
+
+plt.plot(X, Y_)
+plt.scatter(X, Y, color='red', marker='o')
+plt.ylabel('$\times 10^{-2}$')
+plt.xlabel('Scale of factual instances')
+plt.show()
 
