@@ -15,19 +15,18 @@
        from this visible KG.
 ================================================================================
 """
-
+import math
 import os
-
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 
 import numpy as np
 import matplotlib.pyplot as plt
-import bayesianet as net
-
+import src.bayesianet as net
+from src.nDCG import NDCG, mean_NDCG, linear_DCG, exponential_DCG
 
 triple_file = '../data/cn15k/train.tsv'
 bayesianNet = net.BN()
-facts, kg = bayesianNet.createBNfromKG(triple_file)  # cost too much !
+facts, kg = bayesianNet.createBNfromKG(triple_file)  # todo: cost too much !
 print(facts, len(kg))
 bn_file = '../data/cn15k/bayesiannet.pkl'
 bayesianNet.save(bn_file)
@@ -51,7 +50,7 @@ with open(test_file, mode='r', encoding='utf-8') as tf:
 
 print(len(triple_confidence))
 
-fact_0 = ()
+fact_0 = ()  # todo : choose a fact / some facts to record its confidence changes.
 fact_0_confidences = list()
 # Prediction for each testing triple
 for fact in triple_confidence.keys():
@@ -66,12 +65,25 @@ for fact in triple_confidence.keys():
     fact_0_confidences.append(fact_0_conf)
 
 # Computing MSE, MAE, linear NDCG, and exponential NDCG
-
+mse = 0
+mae = 0
+for t in triple_prediction.keys():
+    x = triple_confidence[t]
+    pre = triple_prediction[t]
+    mse += (x - pre) ** 2
+    mae += math.abs(x - pre)
+mse = mse / len(triple_confidence)
+mae = mae / len(triple_confidence)
+print('MSE:', mse)
+print('MAE:', mae)
+# NDCG
+NDCG()
 
 
 # Visualization of testing for adding evidence to raise posterior probability
-X = np.array([i for i in range(4, len(fact_0_confidences))])  # drop some trivial values
-Y = np.array([100*i for i in fact_0_confidences[4:]])
+m = 4  # drop some first trivial values
+X = np.array([i for i in range(m, len(fact_0_confidences))])
+Y = np.array([100*i for i in fact_0_confidences[m:]])
 
 coefficients = np.polyfit(X, Y, 1)
 polynomial = np.poly1d(coefficients)
