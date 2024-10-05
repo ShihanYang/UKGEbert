@@ -70,8 +70,9 @@ for fact in triple_confidence.keys():
 
 
 # Visualization of testing for adding evidence to raise posterior probability
-X = np.array([i for i in range(4, len(fact_0_confidences))])  # drop some trivial values
-Y = np.array([100*i for i in fact_0_confidences[4:]])
+m = 4  # drop some first trivial values
+X = np.array([i for i in range(m, len(fact_0_confidences))])
+Y = np.array([100*i for i in fact_0_confidences[m:]])
 
 coefficients = np.polyfit(X, Y, 1)
 polynomial = np.poly1d(coefficients)
