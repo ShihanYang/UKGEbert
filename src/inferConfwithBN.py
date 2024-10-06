@@ -26,7 +26,7 @@ from src.nDCG import NDCG, mean_NDCG, linear_DCG, exponential_DCG
 
 # triple_file = '../data/cn15k/train-.tsv'
 # bayesianNet = net.BN()
-# facts, kg = bayesianNet.createBNfromKG(triple_file)  # todo: cost too much ! just do one time.
+# facts, kg = bayesianNet.createBNfromKG(triple_file)  # todo: cost too much ! just do it once.
 # print(facts, len(kg))  # 1610 / 204984
 # bn_file = '../data/cn15k/bayesiannet.pkl'
 # bayesianNet.save(bn_file)
