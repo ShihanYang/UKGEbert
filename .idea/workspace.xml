@@ -30,6 +30,7 @@
       <change afterPath="$PROJECT_DIR$/data/cn15k/train-.tsv" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/data/token.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bayesianet.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/bayesianet.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/inferConfwithBN.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/inferConfwithBN.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -180,8 +181,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.inferConfwithBN" />
-        <item itemvalue="Python.nDCG" />
         <item itemvalue="Python.bayesianet" />
+        <item itemvalue="Python.nDCG" />
         <item itemvalue="Python.reasoner" />
         <item itemvalue="Python.kgbert2" />
       </list>
@@ -458,7 +459,14 @@
       <option name="project" value="LOCAL" />
       <updated>1728207433475</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="bayesian network inference, accuracy evaluation">
+      <created>1728220996000</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1728220996000</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="UnknownFeatures">

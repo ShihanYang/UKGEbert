@@ -646,7 +646,8 @@ if __name__ == "__main__":
 
     plt.plot(X, Y_)
     plt.scatter(X, Y, color='red', marker='o')
-    plt.ylabel('$\times 10^{-2}$')
+    plt.ylabel('$ \\times\\ 10^{-2}$')
     plt.xlabel('Scale of factual instances')
+    plt.savefig('../log/conf.png')
     plt.show()
 

@@ -16,6 +16,8 @@
 ================================================================================
 """
 import os
+import pickle
+
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 
 import numpy as np
@@ -75,8 +77,8 @@ for t in triple_prediction.keys():
     mae += abs(x - pre)
 mse = mse / len(triple_confidence)
 mae = mae / len(triple_confidence)
-print('MSE:', mse)
-print('MAE:', mae)
+print('MSE:', mse)  # MSE: 0.2939564322876829
+print('MAE:', mae)  # MAE: 0.47038435587157673
 # NDCG
 # ranked_predicted_confidence_list = list()
 # ranked_real_confidence_list = list()
@@ -86,7 +88,11 @@ print('MAE:', mae)
 # Visualization of testing for adding evidence to raise posterior probability
 m = 4  # drop some first trivial values
 X = np.array([i for i in range(m, len(fact_0_confidences))])
-Y = np.array([100*i for i in fact_0_confidences[m:]])
+Y = np.array([10*i for i in fact_0_confidences[m:]])
+Y = np.sort(Y)
+
+with open('../data/cn15k/confidenceupdate.pkl', 'wb') as conf:
+    pickle.dump((X,Y), conf)
 
 coefficients = np.polyfit(X, Y, 1)
 polynomial = np.poly1d(coefficients)
@@ -94,7 +100,8 @@ Y_ = polynomial(X)  # linear fitting
 
 plt.plot(X, Y_)
 plt.scatter(X, Y, color='red', marker='o')
-plt.ylabel('$\times 10^{-2}$')
-plt.xlabel('Scale of factual instances')
+plt.ylabel('$\\times\\ 10^{-1}$')
+plt.xlabel('Number of added factual instances')
+plt.savefig('../log/confidenceupdated.png')
 plt.show()
 
