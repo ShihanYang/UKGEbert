@@ -15,7 +15,6 @@
        from this visible KG.
 ================================================================================
 """
-import math
 import os
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 
@@ -73,7 +72,7 @@ for t in triple_prediction.keys():
     x = triple_confidence[t]
     pre = triple_prediction[t]
     mse += (x - pre) ** 2
-    mae += math.abs(x - pre)
+    mae += abs(x - pre)
 mse = mse / len(triple_confidence)
 mae = mae / len(triple_confidence)
 print('MSE:', mse)
