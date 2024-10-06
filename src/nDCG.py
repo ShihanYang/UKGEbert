@@ -24,6 +24,7 @@
            NDCG@k = \frac{\Sum_u NDCG_u@k} {|u|}
 ================================================================================
 """
+import math
 
 import numpy as np
 
@@ -45,7 +46,7 @@ def exponential_DCG(ranked_gain_list):
 
 def NDCG(ranked_gain, ranked_real, DCG_type='exponential', top_k=None):
     '''
-    :param ranked_gain: prediction list ranked
+    :param ranked_gain: a ranked prediction list
     :param ranked_real: the ranked list
     :param DCG_type: linear or exponential NDCG
     :param top_k: only top k items should be considered
@@ -70,10 +71,11 @@ def NDCG(ranked_gain, ranked_real, DCG_type='exponential', top_k=None):
             ideal_dcg = exponential_DCG(ranked_real)
     if ideal_dcg == 0:
         return 0.0
-    # print(DCG_type, 'DCG =', dcg)
-    # print('Ideal DCG =', ideal_dcg)
     ndcg = dcg / ideal_dcg
-    # print('  NDCG =', ndcg)
+    if ndcg > 1:  # note: need to normalize it
+        ndcg = 1 / ndcg  # or normalizing as 1 / (1 + math.exp(-ndcg))
+    # Normalizing, but the value will be reduced.
+    # ndcg = 1 / (1 + math.exp(-ndcg))
     return ndcg
 
 
@@ -97,17 +99,28 @@ if __name__ == '__main__':
     l2.sort(reverse=True)
     list_pred_list.append(l1)
     list_real_list.append(l2)
+    print(NDCG(l1, l2, 'linear'))
+    print(NDCG(l1, l2))
+
     # for (hotel, usedfor, ?)
     l1 = [0.856, 0.761, 0.694, 0.689, 0.637]
     l2 = [1.0, 0.984, 0.709, 0.709, 0.893]
     l2.sort(reverse=True)
     list_pred_list.append(l1)
     list_real_list.append(l2)
-    # for (fork, isa, ?)  here ndcg > 1 ?
+    print(NDCG(l1, l2, 'linear'))
+    print(NDCG(l1, l2))
+
+    # for (fork, isa, ?)
     l1 = [0.9912731, 0.9814315, 0.9769801, 0.89755726, 0.8726656, 0.6140684]
     l2 = [0.8927087856574166, 0.8927087856574166, 0.8927087856574166, 0.709293243275961, 0.709293243275961, 0.709293243275961]
     list_pred_list.append(l1)
     list_real_list.append(l2)
+    print(NDCG(l1, l2, 'linear'))
+    print(NDCG(l1, l2))
 
+    # mean value for all above NDCGs
     mean_ndcg = mean_NDCG(list_pred_list, list_real_list, 'linear')
-    print('mean NDCG =', mean_ndcg * 100, '%')
+    print('mean linear NDCG =', mean_ndcg * 100, '%')
+    mean_ndcg = mean_NDCG(list_pred_list, list_real_list)
+    print('mean exponential NDCG =', mean_ndcg * 100, '%')

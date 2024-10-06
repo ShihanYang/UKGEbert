@@ -24,12 +24,12 @@ import matplotlib.pyplot as plt
 import src.bayesianet as net
 from src.nDCG import NDCG, mean_NDCG, linear_DCG, exponential_DCG
 
-triple_file = '../data/cn15k/train.tsv'
-bayesianNet = net.BN()
-facts, kg = bayesianNet.createBNfromKG(triple_file)  # todo: cost too much !
-print(facts, len(kg))
-bn_file = '../data/cn15k/bayesiannet.pkl'
-bayesianNet.save(bn_file)
+# triple_file = '../data/cn15k/train-.tsv'
+# bayesianNet = net.BN()
+# facts, kg = bayesianNet.createBNfromKG(triple_file)  # todo: cost too much ! just do one time.
+# print(facts, len(kg))  # 1610 / 204984
+# bn_file = '../data/cn15k/bayesiannet.pkl'
+# bayesianNet.save(bn_file)
 
 
 # load bayesian network from pickle file
@@ -38,9 +38,9 @@ bn_file = '../data/cn15k/bayesiannet.pkl'
 bayesianNet = net.BN.load(bn_file)
 
 # read testing file
-test_file = '../data/cn15k/test.tsv'
-triple_prediction = set()
-triple_confidence = set()
+test_file = '../data/cn15k/test-.tsv'
+triple_prediction = dict()
+triple_confidence = dict()
 with open(test_file, mode='r', encoding='utf-8') as tf:
     lines = tf.readlines()
     for line in lines:
@@ -48,9 +48,11 @@ with open(test_file, mode='r', encoding='utf-8') as tf:
         triple = (ll[0], ll[1], ll[2])
         triple_confidence[triple] = float(ll[3])
 
-print(len(triple_confidence))
+print('testing samples:', len(triple_confidence))  # 1195 / 19166
 
-fact_0 = ()  # todo : choose a fact / some facts to record its confidence changes.
+# todo : choose a fact / some facts to record its confidence changes.
+fact_0 = ('195', '2', '14259', 0.8927087856574166)  # (staff,195 | isa,2 | building material,14259)
+fact_0 = net.Fact().factFromTriple(fact_0)
 fact_0_confidences = list()
 # Prediction for each testing triple
 for fact in triple_confidence.keys():
@@ -77,8 +79,10 @@ mae = mae / len(triple_confidence)
 print('MSE:', mse)
 print('MAE:', mae)
 # NDCG
-NDCG()
-
+# ranked_predicted_confidence_list = list()
+# ranked_real_confidence_list = list()
+# v = NDCG(ranked_predicted_confidence_list, ranked_real_confidence_list, 'linear', top_k=10)
+# print('linear NDCG =', v)
 
 # Visualization of testing for adding evidence to raise posterior probability
 m = 4  # drop some first trivial values

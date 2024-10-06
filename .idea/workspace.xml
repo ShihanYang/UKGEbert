@@ -22,14 +22,17 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="04e7e93c-d3a7-4f4b-813c-1f3b4f12f212" name="Default Changelist" comment="bayesian network inference">
+    <list default="true" id="04e7e93c-d3a7-4f4b-813c-1f3b4f12f212" name="Default Changelist" comment="bayesian network inference, accuracy evaluation">
+      <change afterPath="$PROJECT_DIR$/data/cn15k/bayesiannet.pkl" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/data/cn15k/entity.vec" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/data/cn15k/model_e100_768d.h5" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/data/cn15k/relation.vec" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/cn15k/test-.tsv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/cn15k/train-.tsv" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/data/token.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bayesianet.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/bayesianet.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/inferConfwithBN.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/inferConfwithBN.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nDCG.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/nDCG.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +48,7 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="PUSH_TAGS">
       <GitPushTagMode>
         <option name="argument" value="--follow-tags" />
@@ -133,7 +137,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="kgpreparing" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="nDCG" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="UKGEbert" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -145,7 +149,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/kgpreparing.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/nDCG.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -178,10 +182,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.inferConfwithBN" />
+        <item itemvalue="Python.nDCG" />
         <item itemvalue="Python.bayesianet" />
         <item itemvalue="Python.reasoner" />
         <item itemvalue="Python.kgbert2" />
-        <item itemvalue="Python.kgpreparing" />
       </list>
     </recent_temporary>
   </component>
@@ -435,8 +439,19 @@
       <option name="project" value="LOCAL" />
       <updated>1728097597464</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="bayesian network inference, accuracy evaluation">
+      <created>1728138328911</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1728138328911</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.csv" />
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.tsv" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -470,6 +485,7 @@
     <MESSAGE value="changed for bayesian network inference" />
     <MESSAGE value="changed for bayesian network inference using" />
     <MESSAGE value="bayesian network inference" />
-    <option name="LAST_COMMIT_MESSAGE" value="bayesian network inference" />
+    <MESSAGE value="bayesian network inference, accuracy evaluation" />
+    <option name="LAST_COMMIT_MESSAGE" value="bayesian network inference, accuracy evaluation" />
   </component>
 </project>
