@@ -77,8 +77,8 @@ for t in triple_prediction.keys():
     mae += abs(x - pre)
 mse = mse / len(triple_confidence)
 mae = mae / len(triple_confidence)
-print('MSE:', mse)  # MSE: 0.2939564322876829
-print('MAE:', mae)  # MAE: 0.47038435587157673
+print('MSE:', mse)  # MSE: 0.2906198710806215
+print('MAE:', mae)  # MAE: 0.4644416332075686
 # NDCG
 # ranked_predicted_confidence_list = list()
 # ranked_real_confidence_list = list()
@@ -86,14 +86,14 @@ print('MAE:', mae)  # MAE: 0.47038435587157673
 # print('linear NDCG =', v)
 
 # Visualization of testing for adding evidence to raise posterior probability
-m = 4  # drop some first trivial values
+m = 0  # drop some first trivial values
 X = np.array([i for i in range(m, len(fact_0_confidences))])
 Y = np.array([10*i for i in fact_0_confidences[m:]])
-Y = np.sort(Y)
-
+print(Y)
 with open('../data/cn15k/confidenceupdate.pkl', 'wb') as conf:
     pickle.dump((X,Y), conf)
 
+Y = np.sort(Y)
 coefficients = np.polyfit(X, Y, 1)
 polynomial = np.poly1d(coefficients)
 Y_ = polynomial(X)  # linear fitting
