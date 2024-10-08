@@ -52,7 +52,8 @@ with open(test_file, mode='r', encoding='utf-8') as tf:
 print('testing samples:', len(triple_confidence))  # 1195 / 19166
 
 # todo : choose a fact / some facts to record its confidence changes.
-fact_0 = ('195', '2', '14259', 0.8927087856574166)  # (staff,195 | isa,2 | building material,14259)
+# fact_0 = ('195', '2', '14259', 0.8927087856574166)  # (staff,195 | isa,2 | building material,14259)
+fact_0 = ('7121', '4', '147')  # (capital city,7121 | atlocation,4 | country,147) fact_1
 fact_0 = net.Fact().factFromTriple(fact_0)
 fact_0_confidences = list()
 # Prediction for each testing triple
@@ -85,15 +86,14 @@ print('MAE:', mae)  # MAE: 0.4644416332075686
 # v = NDCG(ranked_predicted_confidence_list, ranked_real_confidence_list, 'linear', top_k=10)
 # print('linear NDCG =', v)
 
-# Visualization of testing for adding evidence to raise posterior probability
-m = 0  # drop some first trivial values
+# Visualization of testing for adding evidence to raise/reduce linearly posterior probability
+m = 4  # drop some first trivial values
 X = np.array([i for i in range(m, len(fact_0_confidences))])
 Y = np.array([10*i for i in fact_0_confidences[m:]])
-print(Y)
 with open('../data/cn15k/confidenceupdate.pkl', 'wb') as conf:
     pickle.dump((X,Y), conf)
 
-Y = np.sort(Y)
+# Y = np.sort(Y)
 coefficients = np.polyfit(X, Y, 1)
 polynomial = np.poly1d(coefficients)
 Y_ = polynomial(X)  # linear fitting
@@ -102,6 +102,6 @@ plt.plot(X, Y_)
 plt.scatter(X, Y, color='red', marker='o')
 plt.ylabel('$\\times\\ 10^{-1}$')
 plt.xlabel('Number of added factual instances')
-plt.savefig('../log/confidenceupdated.png')
+plt.savefig('../log/confidenceupdated.png', bbox_inches='tight', pad_inches=0.5)
 plt.show()
 
