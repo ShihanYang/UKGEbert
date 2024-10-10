@@ -53,7 +53,8 @@ print('testing samples:', len(triple_confidence))  # 1195 / 19166
 
 # todo : choose a fact / some facts to record its confidence changes.
 # fact_0 = ('195', '2', '14259', 0.8927087856574166)  # (staff,195 | isa,2 | building material,14259)
-fact_0 = ('7121', '4', '147')  # (capital city,7121 | atlocation,4 | country,147) fact_1
+# fact_0 = ('7121', '4', '147', 0.709293243275961)  # (capital city,7121 | atlocation,4 | country,147) fact_1
+fact_0 = ('11', '99', '3756')  # (baby,11 | infancy,99 | gorilla,3756) fact_2, 99 not existed
 fact_0 = net.Fact().factFromTriple(fact_0)
 fact_0_confidences = list()
 # Prediction for each testing triple
@@ -93,7 +94,7 @@ Y = np.array([10*i for i in fact_0_confidences[m:]])
 with open('../data/cn15k/confidenceupdate.pkl', 'wb') as conf:
     pickle.dump((X,Y), conf)
 
-# Y = np.sort(Y)
+Y = np.sort(Y)
 coefficients = np.polyfit(X, Y, 1)
 polynomial = np.poly1d(coefficients)
 Y_ = polynomial(X)  # linear fitting

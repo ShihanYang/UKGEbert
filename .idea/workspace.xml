@@ -22,19 +22,17 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="04e7e93c-d3a7-4f4b-813c-1f3b4f12f212" name="Default Changelist" comment="bayesian network inference, accuracy evaluation">
-      <change afterPath="$PROJECT_DIR$/data/cn15k/confidenceupdate_0.pkl" afterDir="false" />
+    <list default="true" id="04e7e93c-d3a7-4f4b-813c-1f3b4f12f212" name="Default Changelist" comment="analysing the process of Bayesian Network">
       <change afterPath="$PROJECT_DIR$/data/cn15k/entity.vec" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/data/cn15k/model_e100_768d.h5" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/data/cn15k/relation.vec" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/data/cn15k/test-.tsv" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/data/cn15k/train-.tsv" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/data/token.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/confidenceupdated_0.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/log/confidenceupdated_ori.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/visualizing.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/inferConfwithBN.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/inferConfwithBN.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/visualizing.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/visualizing.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +73,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;
   }
 }</component>
-  <component name="RunManager" selected="Python.inferConfwithBN">
+  <component name="RunManager" selected="Python.visualizing">
     <configuration name="bayesianet" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="UKGEbert" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -183,8 +181,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.inferConfwithBN" />
         <item itemvalue="Python.visualizing" />
+        <item itemvalue="Python.inferConfwithBN" />
         <item itemvalue="Python.bayesianet" />
         <item itemvalue="Python.nDCG" />
         <item itemvalue="Python.reasoner" />
@@ -490,7 +488,14 @@
       <option name="project" value="LOCAL" />
       <updated>1728304226655</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="analysing the process of Bayesian Network">
+      <created>1728381274545</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1728381274545</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -530,6 +535,7 @@
     <MESSAGE value="changed for bayesian network inference using" />
     <MESSAGE value="bayesian network inference" />
     <MESSAGE value="bayesian network inference, accuracy evaluation" />
-    <option name="LAST_COMMIT_MESSAGE" value="bayesian network inference, accuracy evaluation" />
+    <MESSAGE value="analysing the process of Bayesian Network" />
+    <option name="LAST_COMMIT_MESSAGE" value="analysing the process of Bayesian Network" />
   </component>
 </project>

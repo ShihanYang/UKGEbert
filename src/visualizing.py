@@ -25,6 +25,9 @@ os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 with open('../data/cn15k/confidenceupdate.pkl', 'rb') as conf:
     X, Y = pickle.load(conf)
 
+# Y = np.sort(Y)
+# X = X[240:]
+# Y = Y[240:] * 100
 coefficients = np.polyfit(X, Y, 1)
 polynomial = np.poly1d(coefficients)
 Y_ = polynomial(X)  # linear fitting
