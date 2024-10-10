@@ -22,7 +22,7 @@ import matplotlib.pyplot as plt
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 
 # Visualization of testing for adding evidence to raise/reduce linearly posterior probability
-with open('../data/cn15k/confidenceupdate.pkl', 'rb') as conf:
+with open('../data/cn15k/confidenceupdate_0.pkl', 'rb') as conf:
     X, Y = pickle.load(conf)
 
 # Y = np.sort(Y)
